@@ -10,9 +10,11 @@
 <body>
   <main class="app">
     <div class="center">
-      <input id="search" placeholder="search..." autocomplete="off" />
+      <div class="search-wrap">
+        <input id="search" placeholder="search..." autocomplete="off" />
+        <div id="count" class="count" aria-live="polite">0 records</div>
+      </div>
       <button id="toggle">sort: ↓</button>
-      <div id="count" class="count" aria-live="polite">0 records</div>
     </div>
     <ul id="list" class="list"></ul>
   </main>
