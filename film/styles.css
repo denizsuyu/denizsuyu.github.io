@@ -1,0 +1,51 @@
+:root{
+  --bg:#efe6db;
+  --stone:#3a2f2b;
+  --accent:#a6623e; /* terracotta */
+  --gold:#c9a66b;
+  --muted:#6b584f;
+  --blau:#6b8fa3; /* soft ancient blue */
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:Rubik,system-ui,-apple-system,Segoe UI,Helvetica,Arial;
+  background:linear-gradient(180deg,var(--bg) 0%, #efe4d8 40%, #e6dbcf 100%);
+  color:var(--stone);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.app{min-height:100vh;display:flex;flex-direction:column;align-items:center}
+.hero{width:100%;max-width:920px;padding:48px 20px 10px;text-align:center;position:relative}
+
+.hero::after{
+  /* subtle medallion / sun motif to suggest ancient seal */
+  content:"";position:absolute;left:50%;top:6px;transform:translateX(-50%);width:120px;height:120px;border-radius:50%;
+  background:conic-gradient(from 180deg at 50% 50%, rgba(166,98,62,0.12), rgba(107,143,163,0.06));
+  filter:blur(6px);opacity:0.9;pointer-events:none}
+.title{font-family:Merriweather,serif;margin:0;color:var(--stone);font-weight:700;letter-spacing:0.6px}
+.search-wrap{margin-top:18px}
+#search{width:100%;max-width:560px;padding:14px 18px;border-radius:999px;border:2px solid rgba(58,47,43,0.08);font-size:16px;outline:none;background:linear-gradient(180deg,rgba(255,255,255,0.66),rgba(250,245,238,0.5));box-shadow:0 8px 20px rgba(58,47,43,0.06);border-left:6px solid var(--blau)}
+
+#search::placeholder{color:rgba(58,47,43,0.45)}
+.list{width:100%;max-width:920px;padding:20px 20px 80px;display:flex;flex-direction:column;gap:12px}
+.card{background:linear-gradient(180deg,rgba(255,255,250,0.9),rgba(244,239,233,0.9));border-radius:12px;padding:16px;border-left:8px solid var(--accent);display:flex;flex-direction:column;gap:8px;width:100%;box-shadow:0 6px 18px rgba(58,47,43,0.04)}
+
+.card::before{content:"";height:6px;width:48px;background:linear-gradient(90deg,var(--blau),var(--accent));border-radius:4px;display:block;margin-bottom:6px}
+
+.name{font-weight:600;font-size:17px;color:var(--stone)}
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+.name{font-weight:500;font-size:17px;color:var(--stone)}
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+.foot{margin:40px 0 80px;color:var(--muted)}
+a{color:var(--accent);text-decoration:none}
+@media (max-width:520px){.hero{padding:28px 12px}.title{font-size:20px}.card{padding:12px}}
+
+.count{margin-top:8px;color:var(--muted);font-size:14px;text-align:center}
+
+/* Subtle textured vignette to hint ancient stone */
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(rgba(58,47,43,0.03),transparent 40%);pointer-events:none}
+
+/* subtle stone grain overlay */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(transparent,rgba(255,255,255,0.02));mix-blend-mode:multiply}
