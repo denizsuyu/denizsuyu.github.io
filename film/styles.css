@@ -11,7 +11,8 @@ html,body,#root{height:100%}
 body{
   margin:0;
   font-family:Rubik,system-ui,-apple-system,Segoe UI,Helvetica,Arial;
-  background:linear-gradient(180deg,var(--bg) 0%, #efe4d8 40%, #e6dbcf 100%);
+  background-color: #efe4d8;
+  /* background:linear-gradient(180deg,var(--bg) 0%, #efe4d8 40%, #e6dbcf 100%); */
   color:var(--stone);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
