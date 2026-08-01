@@ -325,7 +325,7 @@
         const tooltip = document.getElementById("map-tooltip");
         function showTooltip(event, province) {
             let html = `
-                <div class="fw-bold mb-1">${province.name}</div>
+                <div class="fw-bold mb-1">${province.name} - ${province.id}</div>
             `;
             if (province.visited) {
                 html += `
