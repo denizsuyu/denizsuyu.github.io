@@ -35,7 +35,7 @@ body{
 
 .card::before{content:"";height:6px;width:48px;background:linear-gradient(90deg,var(--blau),var(--accent));border-radius:4px;display:block;margin-bottom:6px}
 
-.name{font-weight:600;font-size:17px;color:var(--stone)}
+.name{font-family: Rubik, sans-serif !important;font-weight:600;font-size:17px;color:var(--stone)}
 .meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
 .name{font-weight:500;font-size:17px;color:var(--stone)}
 .meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
